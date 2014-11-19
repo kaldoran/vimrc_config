@@ -34,3 +34,9 @@ function! Tab_Or_Complete()
   endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
+:au CursorHold * checktime
+:set autoread
+
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>a
+set pastetoggle=<F2>
